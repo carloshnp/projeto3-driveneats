@@ -1,43 +1,88 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #EEEEEE;
 }
 
 .container {
     width: 100%;
     height: 100%;
     position: relative;
+    background-color: #EEEEEE;
 }
 
 .header {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: #DDDDDD;
+    padding-left: 21px;
+    background-color: #CF2B2B;
     height: 92px;
     width: 100%;
 }
 
+.header-title {
+    padding-top: 12px;
+    font-size: 44px;
+    color: #FFFFFF;
+}
+
+.header-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
 .content {
     margin: 123px 0px 108px;
-    background-color: #CCCCCC;
+    background-color: #EEEEEE;
 }
 
 .item-menu {
-    background-color: #BBBBBB;
+    margin: 0px 0px 27px 19px;
 }
 
 .item-category {
-    background-color: #AAAAAA;
     height: 41px;
+    font-size: 26px;
 }
 
 .item-selection {
     background-color: #999999;
-    width: 172px;
+    display: flex;
 }
 
 .item {
+    font-size: 16px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
     width: 172px;
+}
+
+.item-container {
+    width: 144px;
+}
+
+.item-picture {
+    padding-top: 18px;
+    width: 144px;
+}
+
+.item-title {
+    padding-top: 8px;
+    font-weight: 700;
+}
+
+.item-subtitle {
+    padding-top: 4px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.item-price {
+    padding: 4px 0 13px;
+    font-weight: 400;
 }
 
 .footer {
@@ -47,18 +92,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #888888;
+    background-color: #FFFFFF;
     height: 92px;
     width: 100%;
 }
 
 .order-button {
-    background-color: #FFFFFF;
+    background-color: #CBCBCB;
     width: 364px;
     height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
 }
 
-// Definições especiais
+.order-button-text {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
 
 .header-title, .item-category {
     font-family: 'Righteous';
