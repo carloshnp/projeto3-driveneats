@@ -1,6 +1,6 @@
 /*
 
-Estrutura do código:
+Estrutura do código: +1
 
 - Selecionar primeiro item
 - Selecionar segundo item
