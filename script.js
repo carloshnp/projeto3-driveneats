@@ -2,9 +2,9 @@
 
 Estrutura do código: +1
 
-- Selecionar primeiro item
-- Selecionar segundo item
-- Selecionar terceiro item
+- Selecionar primeiro item (OK)
+- Selecionar segundo item (OK)
+- Selecionar terceiro item (OK)
 
         # Ao selecionar os itens, apenas um item pode ficar selecionado (mutualmente exclusivo)
         # O script deve ser capaz de armazenar o nome e o preço de cada item selecionado
@@ -35,25 +35,46 @@ Estrutura do código: +1
 
 */
 
-let food_name = ''
-let drink_name = ''
-let dessert_name = ''
-let food_price = ''
-let drink_price = ''
-let dessert_price = ''
-let total_price = ''
-let name = ''
-let address = ''
+let food_name;
+let drink_name;
+let dessert_name;
+let food_price;
+let drink_price;
+let dessert_price;
+let total_price;
+let name;
+let address;
 
-function select_item() {
-
+function selectFood(select) {
+    // Essa função seleciona um item da seção Food, e coloca as variáveis food_name e food_price com o nome e o preço do item, respectivamente.
+    let selectedItem = document.querySelector('.food .selected'); // verifica se há um item já selecionado
+    if (selectedItem !== null) {
+        selectedItem.classList.remove('selected');
+    } // remove a seleção do item já selecionado para selecionar outro item
+    select.classList.add('selected'); // seleciona o item (mudando ele)
+    food_name = document.querySelector('.selected .item-title').innerHTML; // pega o texto dentro do 'item-title' e define como o food_name
+    food_price = document.querySelector('.selected .item-price').innerHTML; // pega o texto dentro do 'item-price' e define como o food_price
 }
 
-function get_item_name() {
-
+function selectDrink(select) {
+    // Essa função seleciona um item da seção Drink, e coloca as variáveis drink_name e drink_price com o nome e o preço do item, respectivamente.
+    let selectedItem = document.querySelector('.drink .selected');
+    if (selectedItem !== null) {
+        selectedItem.classList.remove('selected');
+    }
+    select.classList.add('selected');
+    drink_name = document.querySelector('.selected .item-title').innerHTML;
+    drink_price = document.querySelector('.selected .item-price').innerHTML; 
 }
 
-function get_item_price() {
-
+function selectDessert(select) {
+    // Essa função seleciona um item da seção Dessert, e coloca as variáveis dessert_name e dessert_price com o nome e o preço do item, respectivamente.
+    let selectedItem = document.querySelector('.dessert .selected'); 
+    if (selectedItem !== null) {
+        selectedItem.classList.remove('selected');
+    }
+    select.classList.add('selected'); 
+    dessert_name = document.querySelector('.selected .item-title').innerHTML; 
+    dessert_price = document.querySelector('.selected .item-price').innerHTML;
 }
 
