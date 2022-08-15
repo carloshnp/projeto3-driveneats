@@ -38,6 +38,7 @@ ion-icon {
     font-size: 22px;
     font-weight: 700;
     position: relative;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
 }
 
 .checkout-title {
@@ -108,6 +109,7 @@ ion-icon {
     height: 92px;
     width: 100%;
     z-index: 2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-title {
@@ -142,24 +144,31 @@ ion-icon {
 .item-selection {
     display: flex;
     overflow-x: scroll;
+    padding-right: 5px;
 }
 
 .item {
     font-size: 16px;
     margin-left: 16px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     background-color: #FFFFFF;
     border-radius: 9px;
     position: relative;
+    filter: drop-shadow(0px 8px 5px rgba(0, 0, 0, 0.25));
 }
 
 .selected1, .selected2, .selected3 {
     box-shadow: inset 0 0 0 5px #32B72F;
     position: relative;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
+    margin-bottom: 16px;
+    margin-top: 4px;
+    transition: 300ms;
 }
 
-.selected ion-icon {
+.selected1 ion-icon, .selected2 ion-icon, .selected3 ion-icon {
     display: initial;
     position: absolute;
     color: #32B72F;
@@ -176,6 +185,13 @@ ion-icon {
 .item-picture {
     padding-top: 18px;
     width: 144px;
+}
+
+.item-picture img {
+    width: 144px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 9px;
 }
 
 .item-title {
@@ -218,6 +234,7 @@ ion-icon {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.25));
 }
 
 .order-button-text {
