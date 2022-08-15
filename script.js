@@ -54,6 +54,8 @@ function selectFood(select) {
     select.classList.add('selected'); // seleciona o item (mudando ele)
     food_name = document.querySelector('.selected .item-title').innerHTML; // pega o texto dentro do 'item-title' e define como o food_name
     food_price = document.querySelector('.selected .item-price').innerHTML; // pega o texto dentro do 'item-price' e define como o food_price
+
+    orderEnabled(); // verifica se os itens foram selecionados para ativar o botão do checkout
 }
 
 function selectDrink(select) {
@@ -64,7 +66,9 @@ function selectDrink(select) {
     }
     select.classList.add('selected');
     drink_name = document.querySelector('.selected .item-title').innerHTML;
-    drink_price = document.querySelector('.selected .item-price').innerHTML; 
+    drink_price = document.querySelector('.selected .item-price').innerHTML;
+    
+    orderEnabled();
 }
 
 function selectDessert(select) {
@@ -76,5 +80,22 @@ function selectDessert(select) {
     select.classList.add('selected'); 
     dessert_name = document.querySelector('.selected .item-title').innerHTML; 
     dessert_price = document.querySelector('.selected .item-price').innerHTML;
+
+    orderEnabled();
 }
 
+function orderEnabled() {
+    // verifica se os itens foram selecionados para ativar o botão do checkout
+    if (food_name && drink_name && dessert_name !== undefined) {
+        let enabled = document.querySelector('.order-button');
+        enabled.classList.add('enabled-order');
+        enabled.innerHTML = 'Fechar pedido';
+    }
+}
+
+function checkout() {
+    let check = document.querySelector('.order-button .enabled-order');
+    if (check !== null) {
+        
+    }
+}
